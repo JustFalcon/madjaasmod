@@ -4129,9 +4129,8 @@ mas_code_of_kalantiaw_reform = {
 	}
 	modifiers = {
 		allowed_marine_fraction = 0.25
-		max_admiral_fire = 1
-		max_admiral_shock = 1
 		admiral_cost = -0.5
+		blockade_efficiency = 0.5
 	}
 	custom_attributes = {
 		enables_aristocratic_idea_group = yes
