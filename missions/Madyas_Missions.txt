@@ -11,9 +11,28 @@ mas_conquest_1 = {
 		required_missions = { mas_j_sound_of_bells } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			luzon_area = {
+				OR = {
+					country_or_non_sovereign_subject_holds = MAS
+					is_empty = yes
+				}
+			}
+			southern_luzon_area = {
+				OR = {
+					country_or_non_sovereign_subject_holds = MAS
+					is_empty = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = filipino_conquer_luzon
+				duration = 7300
+			}
+		} 
 	}
 }
 mas_conquest_2 = {
@@ -29,9 +48,19 @@ mas_conquest_2 = {
 		required_missions = { mas_j_sound_of_bells } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			4352 = {
+				country_or_non_sovereign_subject_holds = MAS
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = mas_the_sound_of_bells
+				duration = -1
+			}
+		} 
 	}
 }
 mas_conquest_3 = {
@@ -46,9 +75,48 @@ mas_conquest_3 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			army_size_percentage = 0.9
+			num_of_generals = 1
+			has_spy_network_in = {
+				who = CEB
+				value = 10
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			4352 = {
+				add_core = MAS
+			}
+			visayas_area = {
+				add_permanent_claim = MAS
+			}
+			BTU = {
+				every_owned_province = {
+					add_permanent_claim = MAS
+				}
+			}
+			TDO = {
+				every_owned_province = {
+					add_permanent_claim = MAS
+				}
+			}
+			MNA = {
+				every_owned_province = {
+					add_permanent_claim = MAS
+				}
+			}
+			MGD = {
+				every_owned_province = {
+					add_permanent_claim = MAS
+				}
+			}
+			PGS = {
+				every_owned_province = {
+					add_permanent_claim = MAS
+				}
+			}
+		 } 
 	}
 	
 	mas_j_crush_mindanao = {
@@ -60,9 +128,27 @@ mas_conquest_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			mindanao_area = {
+				OR = {
+					country_or_non_sovereign_subject_holds = MAS
+					is_empty = yes
+				}
+			}
+			east_midlands_area = {
+				OR = {
+					country_or_non_sovereign_subject_holds = MAS
+					is_empty = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = filipino_conquer_mindanao
+				duration = 7300
+			}
+		} 
 	}
 }
 mas_assembling_the_fleet = {
@@ -77,9 +163,21 @@ mas_assembling_the_fleet = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			navy_size_percentage = 1
+			num_of_admirals = 1
+			num_of_galley = 10
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier_for_age = {
+				name = mas_experienced_blockades
+				age = age_of_discovery
+			}
+			651 = {
+				add_permanent_claim = MAS
+			}
+		} 
 	}
 
 	mas_j_sulu_conquest = {
@@ -88,9 +186,23 @@ mas_assembling_the_fleet = {
 		required_missions = { mas_j_assembling_fleet } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			651 = {
+				country_or_non_sovereign_subject_holds = MAS
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			palawan_area = {
+				add_permanent_claim = MAS
+			}
+			brunei_area = {
+				add_permanent_claim = MAS
+			}
+			sabah_area = {
+				add_permanent_claim = MAS
+			}
+		} 
 	}
 }
 mas_branch_4_1 = {
