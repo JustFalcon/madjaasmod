@@ -1,0 +1,103 @@
+mas_conquest_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_crush_tondo = {
+		icon = mission_open_up_china
+		position = 2
+		required_missions = { mas_j_sound_of_bells } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_conquest_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_crush_cebu = {
+		icon = mission_invade_island
+		position = 2
+		required_missions = { mas_j_sound_of_bells } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_conquest_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_sound_of_bells = {
+		icon = mission_conquer_arakan
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+	
+	mas_j_crush_mindanao = {
+		icon = mission_reclaim_lost_territory
+		position = 2
+		required_missions = {
+			mas_j_sound_of_bells
+			mas_j_assembling_fleet
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_assembling_the_fleet = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_assembling_fleet = {
+		icon = mission_polynesian_navy_build
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_sulu_conquest = {
+		icon = per_muslim_integration
+		position = 2
+		required_missions = { mas_j_assembling_fleet } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_branch_4_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+}
