@@ -6,3 +6,8 @@ mas_experienced_blockades = {
 	blockade_efficiency = 0.5
 	siege_blockade_progress = 1
 }
+mas_riches_of_borneo = {
+	development_cost = -0.1
+	build_cost = -0.25
+	build_time = -0.25
+}

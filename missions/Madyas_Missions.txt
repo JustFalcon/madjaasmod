@@ -9,16 +9,29 @@ mas_conquest_1 = {
 		icon = mission_open_up_china
 		position = 2
 		required_missions = { mas_j_sound_of_bells } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = luzon_area
+				area = southern_luzon_area
+			}
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+		} 
 
 		trigger = {
 			luzon_area = {
+				type = all
 				OR = {
 					country_or_non_sovereign_subject_holds = MAS
 					is_empty = yes
 				}
 			}
 			southern_luzon_area = {
+				type = all
 				OR = {
 					country_or_non_sovereign_subject_holds = MAS
 					is_empty = yes
@@ -46,7 +59,12 @@ mas_conquest_2 = {
 		icon = mission_invade_island
 		position = 2
 		required_missions = { mas_j_sound_of_bells } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 4352
+			NOT = {
+				country_or_non_sovereign_subject_holds = MAS
+			}
+		} 
 
 		trigger = { 4352 = { country_or_non_sovereign_subject_holds = MAS }  } 
 
@@ -113,16 +131,29 @@ mas_conquest_3 = {
 			mas_j_sound_of_bells
 			mas_j_assembling_fleet
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = mindanao_area
+				area = west_mindanao_area
+			}
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+		} 
 
 		trigger = {
 			mindanao_area = {
+				type = all
 				OR = {
 					country_or_non_sovereign_subject_holds = MAS
 					is_empty = yes
 				}
 			}
-			east_midlands_area = {
+			west_mindanao_area = {
+				type = all
 				OR = {
 					country_or_non_sovereign_subject_holds = MAS
 					is_empty = yes
@@ -131,6 +162,7 @@ mas_conquest_3 = {
 		}
 
 		effect = {
+			add_stability_or_adm_power = yes
 			add_country_modifier = {
 				name = "filipino_conquer_mindanao"
 				duration = 7300
@@ -169,7 +201,12 @@ mas_assembling_the_fleet = {
 		icon = per_muslim_integration
 		position = 2
 		required_missions = { mas_j_assembling_fleet } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 651
+			NOT = {
+				country_or_non_sovereign_subject_holds = MAS
+			}
+		} 
 
 		trigger = { 651 = { country_or_non_sovereign_subject_holds = MAS }  } 
 
@@ -205,10 +242,44 @@ mas_branch_4_1 = {
 			mas_j_sulu_conquest
 			mas_j_crush_mindanao
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = palawan_area
+				area = brunei_area
+				area = sabah_area
+			}
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			palawan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = MAS
+			}
+			brunei_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = MAS
+			}
+			sabah_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = MAS
+				
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = mas_riches_of_borneo
+				duration = 9125
+			}  
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		} 
 	}
 }
