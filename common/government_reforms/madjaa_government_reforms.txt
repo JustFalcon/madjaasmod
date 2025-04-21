@@ -13,12 +13,11 @@ mas_code_of_kalantiaw_reform = {
 	}
 	modifiers = {
 		allowed_marine_fraction = 0.25
-		admiral_cost = -0.5
-		blockade_efficiency = 0.5
 	}
 	custom_attributes = {
 		enables_aristocratic_idea_group = yes
 		enables_plutocratic_idea_group = yes
+		cheaper_coastal_province_core = yes
 	}
 
 }

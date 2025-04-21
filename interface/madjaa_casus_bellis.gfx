@@ -1,0 +1,9 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_cb_madjaa_naval_imperialism"
+		texturefile = "gfx/interface/casus_bellis/cb_trade_war.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

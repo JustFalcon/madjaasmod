@@ -1,0 +1,22 @@
+cb_madjaa_naval_imperialism = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		OR = {
+			full_idea_group = naval_ideas
+			full_idea_group = maritime_ideas
+			has_country_flag = madjass_enable_naval_imperialism_flag
+		}
+	}
+
+	prerequisites = {
+		any_owned_province = {
+			AND = {
+				range = ROOT
+				has_port = yes
+			}
+		}
+	}
+
+	war_goal = madjaa_naval_imperialism
+}

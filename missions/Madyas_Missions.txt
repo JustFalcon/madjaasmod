@@ -145,20 +145,19 @@ mas_conquest_3 = {
 		trigger = {
 			army_size_percentage = 0.9
 			num_of_generals = 1
-			has_spy_network_in = {
-				who = CEB
-				value = 10
-			}
 		}
 
 		effect = {
-			4352 = { add_core = MAS } 
-			visayas_area = { add_permanent_claim = MAS } 
-			BTU = { every_owned_province = { add_permanent_claim = MAS }  } 
-			TDO = { every_owned_province = { add_permanent_claim = MAS }  } 
-			MNA = { every_owned_province = { add_permanent_claim = MAS }  } 
-			MGD = { every_owned_province = { add_permanent_claim = MAS }  } 
-			PGS = { every_owned_province = { add_permanent_claim = MAS }  } 
+			custom_tooltip = mas_J_phillipines_claim_tt
+			hidden_effect = {
+				4352 = { add_core = MAS } 
+				visayas_area = { add_permanent_claim = MAS } 
+				BTU = { every_owned_province = { add_permanent_claim = MAS }  } 
+				TDO = { every_owned_province = { add_permanent_claim = MAS }  } 
+				MNA = { every_owned_province = { add_permanent_claim = MAS }  } 
+				MGD = { every_owned_province = { add_permanent_claim = MAS }  } 
+				PGS = { every_owned_province = { add_permanent_claim = MAS }  }
+			} 
 		}
 	}
 

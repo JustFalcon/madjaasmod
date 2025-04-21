@@ -13548,11 +13548,12 @@ TKG_ideas = {
 
 MAS_ideas = {
 	start = {
-		infantry_power = 0.1
-		naval_forcelimit_modifier = 0.33
+		leader_naval_manuever = 1
+		sailor_maintenance_modifer = -0.15
 	}
 	bonus = {
-		allowed_marine_fraction = 0.25
+		leader_naval_fire = 1
+		max_admiral_fire = 1
 	}
 	
 	trigger = {
@@ -13568,21 +13569,21 @@ MAS_ideas = {
 		naval_morale = 0.15
 	}
 	mas_riches_of_the_visayas = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 	mas_masters_of_maritime_warfare = {
-		navy_tradition = 1
+		leader_naval_shock = 1
+		ship_durability = 0.05
 	}
 	mas_articles_of_the_confederation = {
-		republican_tradition = 0.3
-		monthly_reform_progress = 0.1
+		republican_tradition = 0.15
 	}
 	mas_kinaduatan = {
-		all_estate_loyalty_equilibrium = 0.05
+		stability_cost_modifier = -0.25
 	}
 	mas_expand_the_shipbuilding_sector = {
-		global_ship_cost = -0.2
-		global_ship_recruit_speed = -0.2
+		global_ship_cost = -0.1
+		global_ship_recruit_speed = -0.1
 	}
 }
 

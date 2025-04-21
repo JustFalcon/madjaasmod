@@ -1,0 +1,45 @@
+madjaa_naval_imperialism = {
+	type = blockade_ports
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 1.0	
+		allowed_provinces_are_eligible = yes
+		allowed_provinces = {
+			OR = {
+				has_port = yes
+				is_claim = ROOT
+				is_core = ROOT
+				province_has_center_of_trade_of_level = 1
+				range = ROOT
+			}
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = MADJAA_ALL_COASTAL
+		prov_desc = MADJAA_ALL_COSTAL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 1.0	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = MADJAA_ALL_COASTAL
+		prov_desc = ALL_PROVS
+	}	
+	
+	war_name = MADJAA_COASTAL_IMPERIALISM_WAR_NAME	
+}
