@@ -1,0 +1,24 @@
+# This file contains Madjaas Mod Government Reforms
+mas_code_of_kalantiaw_reform = {
+	icon = "great_sea"
+	allow_normal_conversion = yes
+	potential = {
+		AND = {
+			OR = {
+				has_unlocked_government_reform = { government_reform = mas_code_of_kalantiaw_reform }
+				have_had_reform = mas_code_of_kalantiaw_reform
+			}
+			is_or_was_tag = { tag = MAS }
+		}
+	}
+	modifiers = {
+		allowed_marine_fraction = 0.25
+		admiral_cost = -0.5
+		blockade_efficiency = 0.5
+	}
+	custom_attributes = {
+		enables_aristocratic_idea_group = yes
+		enables_plutocratic_idea_group = yes
+	}
+
+}
