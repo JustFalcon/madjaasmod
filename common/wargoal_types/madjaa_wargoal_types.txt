@@ -43,3 +43,51 @@ madjaa_naval_imperialism = {
 	
 	war_name = MADJAA_COASTAL_IMPERIALISM_WAR_NAME	
 }
+
+madjaa_naval_imperialism_landless = {
+	type = blockade_ports
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 0.75	
+		allowed_provinces_are_eligible = yes
+		allowed_provinces = {
+			always = no
+		}
+		
+		peace_options = {
+			po_gold
+			po_steer_trade
+			po_trade_power
+			
+		}
+
+		deny_annex = yes
+		
+		country_desc = MADJAA_ALL_COASTAL
+		prov_desc = MADJAA_ALL_COSTAL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 1.0	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_gold
+			po_return_cores
+		}
+
+		
+		
+		country_desc = MADJAA_ALL_COASTAL
+		prov_desc = ALL_PROVS
+	}	
+	
+	war_name = MADJAA_COASTAL_IMPERIALISM_WAR_NAME	
+}

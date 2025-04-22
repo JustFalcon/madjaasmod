@@ -3,9 +3,8 @@ cb_madjaa_naval_imperialism = {
 
 	prerequisites_self = {
 		OR = {
-			full_idea_group = naval_ideas
-			full_idea_group = maritime_ideas
 			has_country_flag = madjass_enable_naval_imperialism_flag
+			has_government_attribute = madjass_navl_imperialism_mechanic
 		}
 	}
 
@@ -19,4 +18,37 @@ cb_madjaa_naval_imperialism = {
 	}
 
 	war_goal = madjaa_naval_imperialism
+}
+
+cb_madjaa_naval_imperialism_landless = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		OR = {
+			full_idea_group = naval_ideas
+			full_idea_group = maritime_ideas
+			has_country_flag = madjass_enable_naval_imperialism_landless_flag
+		}
+	}
+
+	prerequisites = {
+		any_owned_province = {
+			AND = {
+				trade_range = ROOT
+				has_port = yes
+			}
+		}
+	}
+
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_release_vassals
+		po_release_annexed
+		po_return_cores
+		po_become_vassal
+		po_subjugate_vassal
+		po_transfer_vassals
+	}
+
+	war_goal = madjaa_naval_imperialism_landless
 }
