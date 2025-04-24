@@ -1,4 +1,32 @@
-mas_conquest_1 = {
+mas_envoys_to_china = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_envoys_to_china_1 = {
+		icon = mission_to_the_south_china_sea
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_ee_welcome_expedition = {
+		icon = qng_balance_mandate
+		position = 2
+		required_missions = { mas_envoys_to_china_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_conquest_2 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -47,91 +75,9 @@ mas_conquest_1 = {
 			}
 		}
 	}
-
-	mas_j_new_china_ties = {
-		icon = qng_balance_mandate
-		position = 3
-		required_missions = { mas_j_crush_tondo } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-}
-mas_mandate_unknown = {
-	slot = 1
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = MAS } 
-
-	mas_j_china_one_unknown = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { mas_j_new_china_ties } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	mas_j_china_two_unknown = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { mas_j_china_one_unknown } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-}
-mas_conquest_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = MAS } 
-
-	mas_j_crush_cebu = {
-		icon = mission_invade_island
-		position = 2
-		required_missions = { mas_j_sound_of_bells } 
-		provinces_to_highlight = {
-			province_id = 4352
-			NOT = { country_or_non_sovereign_subject_holds = MAS } 
-		}
-
-		trigger = { 4352 = { country_or_non_sovereign_subject_holds = MAS }  } 
-
-		effect = {
-			add_stability_or_adm_power = yes
-			add_country_modifier = {
-				name = "mas_the_sound_of_bells"
-				duration = -1
-			}
-		}
-	}
-
-	mas_j_colonize_the_empty_land = {
-		icon = mission_settlers_north_america
-		position = 3
-		required_missions = {
-			mas_j_crush_cebu
-			mas_j_crush_tondo
-			mas_j_crush_mindanao
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
 }
 mas_conquest_3 = {
-	slot = 3
+	slot = 2
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -156,53 +102,27 @@ mas_conquest_3 = {
 				TDO = { every_owned_province = { add_permanent_claim = MAS }  } 
 				MNA = { every_owned_province = { add_permanent_claim = MAS }  } 
 				MGD = { every_owned_province = { add_permanent_claim = MAS }  } 
-				PGS = { every_owned_province = { add_permanent_claim = MAS }  }
-			} 
+				PGS = { every_owned_province = { add_permanent_claim = MAS }  } 
+			}
 		}
 	}
 
-	mas_j_crush_mindanao = {
-		icon = mission_reclaim_lost_territory
+	mas_j_crush_cebu = {
+		icon = mission_invade_island
 		position = 2
-		required_missions = {
-			mas_j_sound_of_bells
-			mas_j_assembling_fleet
-		}
+		required_missions = { mas_j_sound_of_bells } 
 		provinces_to_highlight = {
-			OR = {
-				area = mindanao_area
-				area = west_mindanao_area
-			}
-			NOT = {
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					is_empty = yes
-				}
-			}
+			province_id = 4352
+			NOT = { country_or_non_sovereign_subject_holds = MAS } 
 		}
 
-		trigger = {
-			mindanao_area = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = MAS
-					is_empty = yes
-				}
-			}
-			west_mindanao_area = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = MAS
-					is_empty = yes
-				}
-			}
-		}
+		trigger = { 4352 = { country_or_non_sovereign_subject_holds = MAS }  } 
 
 		effect = {
 			add_stability_or_adm_power = yes
 			add_country_modifier = {
-				name = "filipino_conquer_mindanao"
-				duration = 7300
+				name = "mas_the_sound_of_bells"
+				duration = -1
 			}
 		}
 	}
@@ -220,9 +140,24 @@ mas_conquest_3 = {
 
 		effect = {  } 
 	}
+
+	mas_j_colonize_the_empty_land = {
+		icon = mission_settlers_north_america
+		position = 3
+		required_missions = {
+			mas_j_crush_cebu
+			mas_j_crush_tondo
+			mas_j_crush_mindanao
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 mas_assembling_the_fleet = {
-	slot = 5
+	slot = 4
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -289,11 +224,57 @@ mas_assembling_the_fleet = {
 	}
 }
 mas_branch_4_1 = {
-	slot = 4
+	slot = 3
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAS } 
+
+	mas_j_crush_mindanao = {
+		icon = mission_reclaim_lost_territory
+		position = 2
+		required_missions = {
+			mas_j_sound_of_bells
+			mas_j_assembling_fleet
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = mindanao_area
+				area = west_mindanao_area
+			}
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+		}
+
+		trigger = {
+			mindanao_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = MAS
+					is_empty = yes
+				}
+			}
+			west_mindanao_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = MAS
+					is_empty = yes
+				}
+			}
+		}
+
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = "filipino_conquer_mindanao"
+				duration = 7300
+			}
+		}
+	}
 
 	mas_j_book_of_maragtas = {
 		icon = mission_unite_coromandel
