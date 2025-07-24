@@ -1,0 +1,9 @@
+﻿l_english:
+ mas_J_phillipines_claim_tt:0 "§Y[Root.GetName]§! gains a permanent claim on the §YPhilippines§! Area."
+ mas_j_phillipines_colonize_tt:0 "§Y[Root.GetName]§! or its non-tributary subjects own all provinces in the §YPhilippines§! Area besides §Y[651.GetName]§! & §Y[655.GetName]§!"
+ mas_J_phillipines_colonize_efffect_tt:0 "§Y[Root.GetName]§! gains frontiers in all uncolonized provinces in the §YPhilippines§!"
+ mas_j_securing_south_1_tt:0 "All colonized provinces in the East Mindano Area: \n   Owned by §Y[Root.GetName]§! or its non-tributary subjects."
+ mas_j_securing_south_2_tt:0 "All colonized provinces in the West Mindano Area: \n   Owned by §Y[Root.GetName]§! or its non-tributary subjects."
+ mas_j_crush_tondo_1_tt:0 "All colonized provinces in the Northern Luzon Area: \n   Owned by §Y[Root.GetName]§! or its non-tributary subjects."
+ mas_j_crush_tondo_2_tt:0 "All colonized provinces in the Southern Luzon Area: \n   Owned by §Y[Root.GetName]§! or its non-tributary subjects."
+ mas_J_phillipines_borneo_claim_tt:0 "§Y[Root.GetName]§! gains a permanent claim on all provinces in the §YBorneo§! Area."

@@ -11,3 +11,12 @@ mas_riches_of_borneo = {
 	build_cost = -0.25
 	build_time = -0.25
 }
+mas_phillipino_colonization = {
+	global_colonial_growth = 25
+}
+mas_regional_hegemony_1 = {
+	naval_forcelimit_modifier = 0.10
+	land_forcelimit_modifier = 0.10
+	# Monthly Fillipino Hegemony Power?
+	prestige = 0.05
+}
