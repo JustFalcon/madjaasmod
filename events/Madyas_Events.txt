@@ -1,0 +1,79 @@
+namespace = madyas_events
+
+
+
+#########################################################
+#	        Discovery of Papua  						#
+#########################################################
+country_event = {
+	id = madyas_events.1
+	title = "madyas_events.1.t"
+	desc = "madyas_events.1.d"
+	picture = EXPLORERS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		OR = {
+			tag = MAS
+			was_tag = MAS
+		}
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = "madyas_events.1.a" 
+		banda_arafura_seas_area = {
+			ROOT = {
+				discover_province = PREV
+			}
+			every_neighbor_province = {
+				limit = {
+					NOT = { has_discovered = ROOT }
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+		vogelkop_area = {
+			ROOT = {
+				discover_province = PREV
+			}
+			every_neighbor_province = {
+				limit = {
+					NOT = { has_discovered = ROOT }
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+		papua_area = {
+			ROOT = {
+				discover_province = PREV
+			}
+			every_neighbor_province = {
+				limit = {
+					NOT = { has_discovered = ROOT }
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+		coral_sea_area = {
+			ROOT = {
+				discover_province = PREV
+			}
+			every_neighbor_province = {
+				limit = {
+					NOT = { has_discovered = ROOT }
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+	}
+}
