@@ -20,3 +20,12 @@ mas_regional_hegemony_1 = {
 	# Monthly Fillipino Hegemony Power?
 	prestige = 0.05
 }
+mas_spice_islands_colonization = {
+	colonists = 1
+	global_colonial_growth = 25
+	colonist_placement_chance = 0.05
+}
+
+mas_colony_modifier = {
+	local_colonial_growth = 50
+}

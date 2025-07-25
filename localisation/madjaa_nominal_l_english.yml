@@ -6,3 +6,7 @@
  mas_riches_of_borneo:0 "Riches of Borneo"
  desc_mas_riches_of_borneo:0 "With our conquest of Borneo, we have gained access to the wealth of the island. The gold, spices, and other goods have left us with a surplus of wealth, we shall use this surplus to develop our nation."
  mas_regional_hegemony_1:0 "The Madja-as Hegemony"
+ mas_spice_islands_colonization:0 "Spice Island Colonization"
+ desc_mas_spice_islands_colonization:0 "The Spice Islands are a group of islands in the eastern part of the Indonesian archipelago. They are known for their rich spices, such as cloves and nutmeg. The Madja-as have long been interested in colonizing these islands to gain access to their wealth."
+ mas_colony_modifier:0 "Designated Madja-as Colony"
+ desc_mas_colony_modifier:0 "The Madja-as have designated this province as a potential colony."

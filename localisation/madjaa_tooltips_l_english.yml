@@ -7,3 +7,6 @@
  mas_j_crush_tondo_1_tt:0 "All colonized provinces in the Northern Luzon Area: \n   Owned by §Y[Root.GetName]§! or its non-tributary subjects."
  mas_j_crush_tondo_2_tt:0 "All colonized provinces in the Southern Luzon Area: \n   Owned by §Y[Root.GetName]§! or its non-tributary subjects."
  mas_J_phillipines_borneo_claim_tt:0 "§Y[Root.GetName]§! gains a permanent claim on all provinces in the §YBorneo§! Area."
+ mas_j_tidore_ternate_colonization_tt:0 "All Uncolonized Provinces in the §YMoluccas§!, §YNorth Sulawesi§!, and §YSouth Sulawesi§! Areas will gain a modifier to increase colonization speed.\n\nIf any of these provinces are already colonized, §Y[Root.GetName]§! will gain a permanent claim on them.\n"
+ mas_j_is_uncolonized_tt:0 "Is §YUncolonized§!"
+ mas_j_cede_province_648_tt:0 "If §Y[648.GetName]§! is §YUncolonized§!, §Y[Root.GetName]§! will instantly colonize it. If it is not, §Y[Root.GetName]§! will gain a permanent claim on it.\n"

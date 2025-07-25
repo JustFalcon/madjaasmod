@@ -112,17 +112,15 @@ mas_conquest_3 = {
 
 		effect = {
 			custom_tooltip = mas_J_phillipines_claim_tt
-			create_general = {
-				tradition = 70
-			}
+			create_general = { tradition = 70 } 
 			hidden_effect = {
 				4352 = { add_core = MAS } 
 				visayas_area = { add_permanent_claim = MAS } 
-				southern_luzon_area = { add_permanent_claim = MAS }
-				luzon_area = { add_permanent_claim = MAS }
-				mindanao_area = { add_permanent_claim = MAS }
-				west_mindanao_area = { add_permanent_claim = MAS }
-				palawan_area = { add_permanent_claim = MAS }
+				southern_luzon_area = { add_permanent_claim = MAS } 
+				luzon_area = { add_permanent_claim = MAS } 
+				mindanao_area = { add_permanent_claim = MAS } 
+				west_mindanao_area = { add_permanent_claim = MAS } 
+				palawan_area = { add_permanent_claim = MAS } 
 			}
 		}
 	}
@@ -164,13 +162,13 @@ mas_conquest_3 = {
 				area = west_mindanao_area
 				area = palawan_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			NOT = { is_empty = yes }
-			NOT = { province_id = 655 }
-			NOT = { province_id = 651 }
-		} 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = { is_empty = yes } 
+			NOT = { province_id = 655 } 
+			NOT = { province_id = 651 } 
+		}
 
-		trigger = {  
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mas_j_phillipines_colonize_tt
 				visayas_area = {
@@ -209,68 +207,56 @@ mas_conquest_3 = {
 					}
 				}
 			}
-		} 
+		}
 
 		effect = {
 			custom_tooltip = mas_J_phillipines_colonize_efffect_tt
 			hidden_effect = {
 				visayas_area = {
 					if = {
-						limit = {
-							is_empty = yes
-						}
+						limit = { is_empty = yes } 
 						add_siberian_construction = 200
 					}
 				}
 				southern_luzon_area = {
 					if = {
-						limit = {
-							is_empty = yes
-						}
+						limit = { is_empty = yes } 
 						add_siberian_construction = 200
 					}
 				}
 				luzon_area = {
 					if = {
-						limit = {
-							is_empty = yes
-						}
+						limit = { is_empty = yes } 
 						add_siberian_construction = 200
 					}
 				}
 				mindanao_area = {
 					if = {
-						limit = {
-							is_empty = yes
-						}
+						limit = { is_empty = yes } 
 						add_siberian_construction = 200
 					}
 				}
 				west_mindanao_area = {
 					if = {
-						limit = {
-							is_empty = yes
-						}
+						limit = { is_empty = yes } 
 						add_siberian_construction = 200
 					}
 				}
 				palawan_area = {
 					if = {
-						limit = {
-							is_empty = yes
-						}
+						limit = { is_empty = yes } 
 						add_siberian_construction = 200
 					}
-				}	
+				}
 			}
 			hidden_effect = {
 				add_country_modifier = {
-					name = mas_phillipino_colonization
+					name = "mas_phillipino_colonization"
 					duration = 1825
 					hidden = yes
 				}
 			}
-		} 
+		}
 	}
 
 	mas_j_new_regional_power = {
@@ -280,80 +266,11 @@ mas_conquest_3 = {
 			mas_j_colonize_the_empty_land
 			mas_j_book_of_maragtas
 		}
-		provinces_to_highlight = {  
-			area = palawan_area
-			area = brunei_area
-			area = sabah_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			NOT = { is_empty = yes }
-		} 
+		provinces_to_highlight = {  } 
 
-		trigger = {
-			sabah_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			brunei_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			palawan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+		trigger = {  } 
 
-		effect = {
-			add_country_modifier = {
-				name = mas_regional_hegemony_1
-				duration = -1
-			}
-			custom_tooltip = mas_J_phillipines_borneo_claim_tt
-			hidden_effect = {
-				brunei_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				sabah_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				kalimantan_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				palawan_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				kutai_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				banjar_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-		} 
+		effect = {  } 
 	}
 }
 mas_assembling_the_fleet = {
@@ -528,6 +445,17 @@ mas_branch_4_1 = {
 			add_mil_power = 100
 		}
 	}
+
+	mas_j_return_to_borneo = {
+		icon = mission_mnd_maj_rein_in_brunei
+		position = 4
+		required_missions = { mas_j_book_of_maragtas } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 mas_branch_5_1 = {
 	slot = 5
@@ -540,6 +468,261 @@ mas_branch_5_1 = {
 		icon = mission_mnd_maj_candi_shrines
 		position = 4
 		required_missions = { mas_j_religion_unity } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_branch_conquest_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_control_malacca = {
+		icon = indonesian_trade
+		position = 7
+		required_missions = { mas_j_seize_the_straits } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_branch_conquest_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_seize_the_straits = {
+		icon = conquer_malacca
+		position = 6
+		required_missions = { mas_j_prepare_for_conquest } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_sumatran_subjugation = {
+		icon = mission_macehualtin
+		position = 8
+		required_missions = {
+			mas_j_control_malacca
+			mas_j_the_new_empire
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_branch_conquest_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_prepare_for_conquest = {
+		icon = qng_ten_grand_campaigns
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_size_percentage = 0.9
+			num_of_generals = 1
+			mission_completed = mas_j_new_regional_power
+			mission_completed = mas_j_return_to_borneo
+		} 
+
+		effect = {  
+			surabaya_area = { add_permanent_claim = MAS }
+			johor_area = { add_permanent_claim = MAS }
+			spice_islands_area = { add_permanent_claim = MAS }
+			add_country_modifier = {
+				name = mas_spice_islands_colonization
+				duration = 18250
+			}
+		} 
+	}
+
+	mas_j_arrival_on_java = {
+		icon = mission_chakravarti
+		position = 6
+		required_missions = { mas_j_prepare_for_conquest } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_the_new_empire = {
+		icon = mnd_maj_sunda_relations
+		position = 7
+		required_missions = { mas_j_arrival_on_java } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_branch_conquest_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_tidore_ternate = {
+		icon = mission_mnd_maj_cloves
+		position = 6
+		required_missions = { mas_j_prepare_for_conquest } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			spice_islands_area = {
+				type = all
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = mas_j_is_uncolonized_tt
+						is_empty = yes
+					}
+					country_or_non_sovereign_subject_holds = MAS
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = mas_j_tidore_ternate_colonization_tt
+			custom_tooltip = mas_j_cede_province_648_tt
+			sulawesi_area = {
+				add_permanent_claim = MAS
+			}
+			south_sulawesi_area = {
+				add_permanent_claim = MAS
+			}
+			makassar_area = {
+				add_permanent_claim = MAS
+			}
+			hidden_effect = {
+				country_event = {
+					id = madyas_events.1
+					days = 6
+					random = 30
+				}
+				if = {
+					limit = {
+						648 = {
+							is_empty = yes
+						}
+					}
+					add_core = 648
+					648 = {
+						cede_province = MAS
+					}
+				}
+				else_if = {
+					limit = {
+						648 = {
+							country_or_non_sovereign_subject_holds = MAS
+						}
+					}
+					648 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				else = {
+					648 = {
+						add_permanent_claim = MAS
+					}
+				}
+				sulawesi_area = {
+					if = {
+						limit = { is_empty = yes }
+						add_province_modifier = {
+							name = mas_colony_modifier
+							duration = -1
+						}
+					}
+					else = {
+						add_permanent_claim = MAS
+					}
+				}
+				south_sulawesi_area = {
+					if = {
+						limit = { is_empty = yes }
+						add_province_modifier = {
+							name = mas_colony_modifier
+							duration = -1
+						}
+					}
+					else = {
+						add_permanent_claim = MAS
+					}
+				}
+				molluca_area = {
+					if = {
+						limit = { is_empty = yes }
+						add_province_modifier = {
+							name = mas_colony_modifier
+							duration = -1
+						}
+					}
+					else = {
+						add_permanent_claim = MAS
+					}
+				}
+			}
+			
+		} 
+	}
+
+	mas_j_sulawesi = {
+		icon = mission_mnd_maj_subjugate_makassar
+		position = 7
+		required_missions = { mas_j_tidore_ternate } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_southern_islands = {
+		icon = mission_rb_colonise_spice_islands
+		position = 8
+		required_missions = { mas_j_sulawesi } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_branch_conquest_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_papua = {
+		icon = colonize_australia
+		position = 7
+		required_missions = { mas_j_tidore_ternate } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
