@@ -260,7 +260,7 @@ mas_conquest_3 = {
 	}
 
 	mas_j_new_regional_power = {
-		icon = mission_golden_century
+		icon = regal_splendour
 		position = 4
 		required_missions = {
 			mas_j_colonize_the_empty_land
