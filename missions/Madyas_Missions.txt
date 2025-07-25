@@ -114,13 +114,13 @@ mas_conquest_3 = {
 			custom_tooltip = mas_J_phillipines_claim_tt
 			create_general = { tradition = 70 } 
 			hidden_effect = {
-				4352 = { add_core = MAS } 
-				visayas_area = { add_permanent_claim = MAS } 
-				southern_luzon_area = { add_permanent_claim = MAS } 
-				luzon_area = { add_permanent_claim = MAS } 
-				mindanao_area = { add_permanent_claim = MAS } 
-				west_mindanao_area = { add_permanent_claim = MAS } 
-				palawan_area = { add_permanent_claim = MAS } 
+				4352 = { add_core = ROOT } 
+				visayas_area = { add_permanent_claim = ROOT } 
+				southern_luzon_area = { add_permanent_claim = ROOT } 
+				luzon_area = { add_permanent_claim = ROOT } 
+				mindanao_area = { add_permanent_claim = ROOT } 
+				west_mindanao_area = { add_permanent_claim = ROOT } 
+				palawan_area = { add_permanent_claim = ROOT } 
 			}
 		}
 	}
@@ -131,10 +131,10 @@ mas_conquest_3 = {
 		required_missions = { mas_j_sound_of_bells } 
 		provinces_to_highlight = {
 			province_id = 4352
-			NOT = { country_or_non_sovereign_subject_holds = MAS } 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 
-		trigger = { 4352 = { country_or_non_sovereign_subject_holds = MAS }  } 
+		trigger = { 4352 = { country_or_non_sovereign_subject_holds = ROOT }  } 
 
 		effect = {
 			add_stability_or_adm_power = yes
@@ -296,7 +296,7 @@ mas_assembling_the_fleet = {
 				name = "mas_experienced_blockades"
 				age = age_of_discovery
 			}
-			651 = { add_permanent_claim = MAS } 
+			651 = { add_permanent_claim = ROOT } 
 		}
 	}
 
@@ -306,15 +306,15 @@ mas_assembling_the_fleet = {
 		required_missions = { mas_j_assembling_fleet } 
 		provinces_to_highlight = {
 			province_id = 651
-			NOT = { country_or_non_sovereign_subject_holds = MAS } 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 
-		trigger = { 651 = { country_or_non_sovereign_subject_holds = MAS }  } 
+		trigger = { 651 = { country_or_non_sovereign_subject_holds = ROOT }  } 
 
 		effect = {
-			palawan_area = { add_permanent_claim = MAS } 
-			brunei_area = { add_permanent_claim = MAS } 
-			sabah_area = { add_permanent_claim = MAS } 
+			palawan_area = { add_permanent_claim = ROOT } 
+			brunei_area = { add_permanent_claim = ROOT } 
+			sabah_area = { add_permanent_claim = ROOT } 
 		}
 	}
 
@@ -506,9 +506,45 @@ mas_branch_conquest_2 = {
 		required_missions = { mas_j_prepare_for_conquest } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			johor_area = {
+				country_or_non_sovereign_subject_holds = MAS
+				type = all
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			# Add permanent claims on the Malacca area
+			north_malaya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			malaya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			malacca_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			502 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 5475
+					power = 15
+					key = mas_j_malaccan_challenged_trade_key
+				}
+			}
+		} 
 	}
 
 	mas_j_sumatran_subjugation = {
@@ -545,9 +581,9 @@ mas_branch_conquest_3 = {
 		} 
 
 		effect = {  
-			surabaya_area = { add_permanent_claim = MAS }
-			johor_area = { add_permanent_claim = MAS }
-			spice_islands_area = { add_permanent_claim = MAS }
+			surabaya_area = { add_permanent_claim = ROOT }
+			johor_area = { add_permanent_claim = ROOT }
+			spice_islands_area = { add_permanent_claim = ROOT }
 			add_country_modifier = {
 				name = mas_spice_islands_colonization
 				duration = 18250
