@@ -53,7 +53,10 @@
  mas_j_seize_the_straits_title:0 "Seize the Straits"
  mas_j_seize_the_straits_desc:0 ""
 
- mas_j_sumatran_subjugation_title:0 "Subjugate Sumatra"
+ mas_j_ending_empires_title:0 "The Fall of Empires"
+ mas_j_ending_empires_desc:0 ""
+
+ mas_j_sumatran_subjugation_title:0 "The Furthest Reaches"
  mas_j_sumatran_subjugation_desc:0 ""
 
  mas_j_prepare_for_conquest_title:0 "The Three Campaigns"
@@ -68,10 +71,10 @@
  mas_j_tidore_ternate_title:0 "Conquest of Cloves"
  mas_j_tidore_ternate_desc:0 ""
 
- mas_j_sulawesi_title:0 "The Iron Islands"
+ mas_j_sulawesi_title:0 "The Iron Island"
  mas_j_sulawesi_desc:0 ""
 
- mas_j_southern_islands_title:0 "The Lesser Islands"
+ mas_j_southern_islands_title:0 "The Spice Islands"
  mas_j_southern_islands_desc:0 ""
 
  mas_j_papua_title:0 "Colonize the Island of Irian"

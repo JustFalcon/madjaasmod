@@ -29,3 +29,18 @@ mas_spice_islands_colonization = {
 mas_colony_modifier = {
 	local_colonial_growth = 50
 }
+
+mas_regional_hegemony_2 = {
+	naval_forcelimit_modifier = 0.15
+	land_forcelimit_modifier = 0.15
+	# Monthly Fillipino Hegemony Power?
+	prestige = 0.75
+}
+
+mas_regional_hegemony_3 = {
+	republican_tradition = 0.3
+	naval_forcelimit_modifier = 0.25
+	land_forcelimit_modifier = 0.25
+	# Monthly Fillipino Hegemony Power?
+	prestige = 1
+}
