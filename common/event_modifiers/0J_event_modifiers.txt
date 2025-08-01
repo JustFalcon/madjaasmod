@@ -44,3 +44,8 @@ mas_regional_hegemony_3 = {
 	# Monthly Fillipino Hegemony Power?
 	prestige = 1
 }
+
+mas_j_disembarking_strategies = {
+	regiment_disembark_speed = 0.33
+	transport_attrition = -0.33
+}

@@ -16,3 +16,5 @@
  mas_colony_modifier:0 "Designated Madja-as Colony"
  desc_mas_colony_modifier:0 "The Madja-as have designated this province as a potential colony."
  mas_j_malaccan_challenged_trade_key:0 "Malaccan Straits Challenged"
+ mas_j_disembarking_strategies:0 "Malayan Disembarking Strategies"
+ desc_mas_j_disembarking_strategies:0 "The Malayan archipelago is a vast region with many islands. The Madja-as have developed strategies for disembarking troops on these islands, allowing them to quickly and efficiently seize coastal fortifications and ports."

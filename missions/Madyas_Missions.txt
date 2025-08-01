@@ -445,9 +445,27 @@ mas_branch_4_1 = {
 				name = "mas_riches_of_borneo"
 				duration = 9125
 			}
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
+			kutai_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			kalimantan_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			banjar_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -455,11 +473,64 @@ mas_branch_4_1 = {
 		icon = mission_mnd_maj_rein_in_brunei
 		position = 4
 		required_missions = { mas_j_book_of_maragtas } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = kutai_area
+				area = kalimantan_area
+				area = banjar_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = { is_empty = yes } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			kutai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kalimantan_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					custom_trigger_tooltip = {
+						tooltip = mas_j_is_uncolonized_tt
+						is_empty = yes
+					}
+				}
+			}
+			banjar_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					custom_trigger_tooltip = {
+						tooltip = mas_j_is_uncolonized_tt
+						is_empty = yes
+					}
+				}
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = mas_j_securing_borneo_frontiers_tt
+			add_country_modifier = {
+				name = "mas_j_disembarking_strategies"
+				duration = 5475
+			}
+			hidden_effect = {
+				if = {
+					limit = { 2706 = { is_empty = yes }  } 
+					2706 = { add_siberian_construction = 200 } 
+				}
+				if = {
+					limit = { 2708 = { is_empty = yes }  } 
+					2708 = { add_siberian_construction = 200 } 
+				}
+				if = {
+					limit = { 2679 = { is_empty = yes }  } 
+					2679 = { add_siberian_construction = 200 } 
+				}
+			}
+		}
 	}
 }
 mas_branch_5_1 = {
@@ -625,21 +696,13 @@ mas_branch_conquest_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			MAJ = {
-				exists = no
-			}
-			MLC = {
-				exists = no
-			}
-			BRU = {
-				exists = no
-			}
+			MAJ = { exists = no } 
+			MLC = { exists = no } 
+			BRU = { exists = no } 
 			army_size = 40
 			navy_size = 40
-			development_in_provinces = {
-				value = 400
-			}
-		} 
+			development_in_provinces = { value = 400 } 
+		}
 
 		effect = {
 			add_adm_power = 100
@@ -649,7 +712,7 @@ mas_branch_conquest_2 = {
 				type = 10_permanent_power_projection
 				value = 10
 			}
-		} 
+		}
 	}
 
 	mas_j_sumatran_subjugation = {
@@ -1025,6 +1088,152 @@ mas_branch_conquest_5 = {
 		icon = colonize_australia
 		position = 7
 		required_missions = { mas_j_tidore_ternate } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_eco_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_cantonese_trade = {
+		icon = mission_trade_with_cathay
+		position = 11
+		required_missions = { mas_j_the_arteries_of_trade } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_eco_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_the_arteries_of_trade = {
+		icon = mission_dominate_gujarati_trade
+		position = 10
+		required_missions = { mas_j_new_economy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_dominance_over_malaya = {
+		icon = mission_dominate_trade_in_bengal
+		position = 11
+		required_missions = { mas_j_the_arteries_of_trade } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_eco_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_new_economy = {
+		icon = mission_horde_trade
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_construct_buildings = {
+		icon = mission_early_game_buildings
+		position = 10
+		required_missions = { mas_j_new_economy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_eco_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_development_1 = {
+		icon = renaissance_city
+		position = 10
+		required_missions = {
+			mas_j_new_economy
+			mas_j_goods_malaya
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_development_2 = {
+		icon = mission_the_sultanate_restored
+		position = 11
+		required_missions = { mas_j_development_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_eco_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
+
+	mas_j_goods_malaya = {
+		icon = mam_harness_spice_trade
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_strengthen_gem_production = {
+		icon = mission_entrepot_of_india
+		position = 10
+		required_missions = { mas_j_goods_malaya } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_dominance_of_spice_trade = {
+		icon = mission_rb_colonise_spice_islands
+		position = 11
+		required_missions = { mas_j_strengthen_gem_production } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 

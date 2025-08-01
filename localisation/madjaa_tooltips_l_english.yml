@@ -11,3 +11,4 @@
  mas_j_is_uncolonized_tt:0 "Is §YUncolonized§!"
  mas_j_cede_province_648_tt:0 "If §Y[648.GetName]§! is §YUncolonized§!, §Y[Root.GetName]§! will instantly colonize it. If it is not, §Y[Root.GetName]§! will gain a permanent claim on it.\n"
  mas_j_sunda_islands_colonization_tt:0 "All Uncolonized Provinces in the §YLesser Sunda Islands§! and §YTimor§! Areas will gain a modifier to increase colonization speed.\n\nIf any of these provinces are already colonized, §Y[Root.GetName]§! will gain a permanent claim on them.\n"
+ mas_j_securing_borneo_frontiers_tt:0 "If §Y[2706.GetName]§!, §Y[2708.GetName]§!, and §Y[2679.GetName]§! are §YUncolonized§!, §Y[Root.GetName]§! will gain frontiers in them."
