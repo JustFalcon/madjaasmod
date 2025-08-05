@@ -20,6 +20,7 @@ country_event = {
 		}
 	}
 	is_triggered_only = yes
+
 	
 	option = {
 		name = "madyas_events.1.a" 
@@ -75,5 +76,242 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+country_event = {
+	id = madyas_events.2
+	title = "madyas_events.2.t"
+	desc = "madyas_events.2.d"
+	picture = EMPIRE_eventPicture
+	
+
+	trigger = { }
+
+	immediate = {
+		hidden_effect = {
+			ROOT = {
+				save_event_target_as = mas_whois_opinion
+			}
+			every_country = {
+				limit = {
+					is_emperor_of_china = yes
+				}
+				save_event_target_as = chinese_emperor
+			}
+		}
+	}
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "madyas_events.2.a" ## Madja-as Forward Base (Keep)
+		event_target:chinese_emperor = {
+			country_event = {
+				id = madyas_events.3
+				random = 3
+				days = 3
+			}
+		}
+		trigger = {
+			NOT = {
+				is_subject_of_type_with_overlord = {
+					who = event_target:chinese_emperor
+					type = tributary_state
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "madyas_events.2.b" ## Madja-as Hand Over Formosa to the Emperor (Hand over for free)
+		event_target:chinese_emperor = {
+			country_event = {
+				id = madyas_events.4
+				random = 3
+				days = 3
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "madyas_events.2.c" ## Madja-as Hand Over Formosa for a Price (Over Hand over for ducats)
+		event_target:chinese_emperor = {
+			country_event = {
+				id = madyas_events.5
+				random = 3
+				days = 3
+			}
+		}
+		trigger = {
+			NOT = {
+				is_subject_of_type_with_overlord = {
+					who = event_target:chinese_emperor
+					type = tributary_state
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { ## Madyas Doesnt Hand Over Formosa
+	id = madyas_events.3
+	title = "madyas_events.3.t"
+	desc = "madyas_events.3.d"
+	picture = EMPIRE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "madyas_events.3.a" ## Traitorous Pirates!
+		add_mandate = -5
+		taiwan_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+country_event = { ## Madyas Hands Over Formosa!
+	id = madyas_events.4
+	title = "madyas_events.4.t"
+	desc = "madyas_events.4.d"
+	picture = EMPIRE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "madyas_events.4.a" ## Loyal Friends!
+		add_mandate = 5
+		add_opinion = {
+			who = event_target:mas_whois_opinion
+			modifier = returned_core_to_me
+			multiplier = 2
+		}
+		trigger = {
+			event_target:mas_whois_opinion = {
+				NOT = {
+					is_subject_of_type_with_overlord = {
+						who = event_target:chinese_emperor
+						type = tributary_state
+					} 
+				}
+			}
+		}
+	}
+	option = {
+		name = "madyas_events.4.b" ## Loyal Tributaries!
+		highlight = yes
+		add_mandate = 10
+		add_opinion = {
+			who = event_target:mas_whois_opinion
+			modifier = returned_core_to_me
+			multiplier = 2
+		}
+		event_target:mas_whois_opinion = {
+			country_event = {
+				id = madyas_events.6
+				days = 3
+				random = 3
+			}
+		}
+		trigger = {
+			event_target:mas_whois_opinion = {
+				is_subject_of_type_with_overlord = {
+					who = event_target:chinese_emperor
+					type = tributary_state
+				}
+			}
+		}
+	}
+}
+
+country_event = {  ## Madja-as Sells Formosa
+	id = madyas_events.5
+	title = "madyas_events.5.t"
+	desc = "madyas_events.5.d"
+	picture = EMPIRE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "madyas_events.5.a" ## A Fair Price!
+		add_mandate = 5
+		add_treasury = -600
+		taiwan_area = {
+			cede_province = event_target:chinese_emperor
+		}
+		event_target:mas_whois_opinion = {
+			country_event = {
+				id = madyas_events.7
+				days = 3
+				random = 3
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "madyas_events.5.b" ## Too Expensive!
+		add_mandate = -5
+		event_target:mas_whois_opinion = {
+			add_opinion = {
+				who = event_target:chinese_emperor
+				modifier = tributary_refused_tribute
+				multiplier = 2
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {   ### Loyal Tributaries Reward!
+	id = madyas_events.6
+	title = "madyas_events.6.t"
+	desc = "madyas_events.6.d"
+	picture = EMPIRE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "madyas_events.6.a" ## Loyal Tributaries!
+		add_prestige_or_monarch_power = { amount = 25 }
+		capital_scope = {
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+		}
+	}
+}
+
+country_event = {  ## Successful Sale of Formosa
+	id = madyas_events.7
+	title = "madyas_events.7.t"
+	desc = "madyas_events.7.d"
+	picture = EMPIRE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "madyas_events.7.a" ## Nice!
+		add_treasury = 600
 	}
 }
