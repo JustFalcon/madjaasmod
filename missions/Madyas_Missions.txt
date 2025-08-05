@@ -10,7 +10,9 @@ mas_envoys_to_china = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			always = no
+		} 
 
 		effect = {  } 
 	}
@@ -350,7 +352,9 @@ mas_assembling_the_fleet = {
 		required_missions = { mas_j_sulu_conquest } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			always = no
+		} 
 
 		effect = {  } 
 	}
@@ -378,7 +382,6 @@ mas_branch_4_1 = {
 		position = 2
 		required_missions = {
 			mas_j_sound_of_bells
-			mas_j_assembling_fleet
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -1274,7 +1277,9 @@ mas_eco_3 = {
 		position = 9
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			always = no
+		} 
 
 		effect = {  } 
 	}
@@ -1334,7 +1339,9 @@ mas_eco_5 = {
 		position = 9
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			always = no
+		} 
 
 		effect = {  } 
 	}

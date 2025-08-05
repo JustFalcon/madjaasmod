@@ -195,6 +195,14 @@ country_event = { ## Madyas Hands Over Formosa!
 	
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			taiwan_area = {
+				cede_province = event_target:chinese_emperor
+			}
+		}
+	}
+
 	option = {
 		name = "madyas_events.4.a" ## Loyal Friends!
 		add_mandate = 5
