@@ -10,9 +10,7 @@ mas_envoys_to_china = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {
-			always = no
-		} 
+		trigger = { always = no } 
 
 		effect = {  } 
 	}
@@ -88,23 +86,19 @@ mas_conquest_2 = {
 		icon = mission_secure_hajj_ports
 		position = 3
 		required_missions = { mas_j_crush_tondo } 
-		provinces_to_highlight = {
-			area = taiwan_area
-		} 
+		provinces_to_highlight = { area = taiwan_area } 
 
 		trigger = {
 			taiwan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		} 
+		}
 
 		effect = {
 			custom_tooltip = mas_j_formosa_sale_tt
-			country_event = {
-				id = madyas_events.2
-			}
-		} 
+			country_event = { id = madyas_events.2 } 
+		}
 	}
 }
 mas_conquest_3 = {
@@ -288,16 +282,13 @@ mas_conquest_3 = {
 			army_size_percentage = 0.9
 			navy_size_percentage = 0.9
 			prestige = 50
-		} 
+		}
 
 		effect = {
 			add_country_modifier = {
 				name = "mas_regional_hegemony_1"
 				duration = -1
 			}
-			# unlock_estate_privilege = {
-			# 	estate_privilege = estate_nobles_coastal_development
-			# }
 		}
 	}
 }
@@ -352,9 +343,7 @@ mas_assembling_the_fleet = {
 		required_missions = { mas_j_sulu_conquest } 
 		provinces_to_highlight = {  } 
 
-		trigger = {
-			always = no
-		} 
+		trigger = { always = no } 
 
 		effect = {  } 
 	}
@@ -380,9 +369,7 @@ mas_branch_4_1 = {
 	mas_j_crush_mindanao = {
 		icon = mission_reclaim_lost_territory
 		position = 2
-		required_missions = {
-			mas_j_sound_of_bells
-		}
+		required_missions = { mas_j_sound_of_bells } 
 		provinces_to_highlight = {
 			OR = {
 				area = mindanao_area
@@ -977,7 +964,7 @@ mas_branch_conquest_3 = {
 							duration = -1
 						}
 					}
-					else = { add_permanent_claim = MAS }
+					else = { add_permanent_claim = MAS } 
 				}
 				timor_area = {
 					if = {
@@ -987,7 +974,7 @@ mas_branch_conquest_3 = {
 							duration = -1
 						}
 					}
-					else = { add_permanent_claim = MAS }
+					else = { add_permanent_claim = MAS } 
 				}
 				eastern_indian_ocean_area = {
 					ROOT = { discover_province = PREV } 
@@ -1101,8 +1088,8 @@ mas_branch_conquest_4 = {
 				area = makassar_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-			NOT = { is_empty = yes }
-		} 
+			NOT = { is_empty = yes } 
+		}
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1113,7 +1100,7 @@ mas_branch_conquest_4 = {
 				}
 				value = 7
 			}
-		} 
+		}
 
 		effect = {
 			custom_tooltip = mas_j_vogelkop_area_colonization_tt
@@ -1129,7 +1116,7 @@ mas_branch_conquest_4 = {
 					else = { add_permanent_claim = MAS } 
 				}
 			}
-		} 
+		}
 	}
 
 	mas_j_southern_islands = {
@@ -1144,8 +1131,8 @@ mas_branch_conquest_4 = {
 				area = lesser_sunda_islands_area
 				area = timor_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
 		trigger = {
 			lesser_sunda_islands_area = {
@@ -1156,7 +1143,7 @@ mas_branch_conquest_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		} 
+		}
 
 		effect = {
 			2695 = {
@@ -1167,11 +1154,8 @@ mas_branch_conquest_4 = {
 				add_base_manpower = 1
 			}
 			custom_tooltip = mas_j_spreading_of_cloves_tt
-			hidden_effect = {
-				set_country_flag = mas_j_spreading_of_cloves
-				# Event Chain to slowly turn all of the potential clove islands into guarenteed clove islands by using money & mana.
-			}
-		} 
+			hidden_effect = { set_country_flag = mas_j_spreading_of_cloves } 
+		}
 	}
 }
 mas_branch_conquest_5 = {
@@ -1192,12 +1176,10 @@ mas_branch_conquest_5 = {
 			}
 			OR = {
 				is_empty = yes
-				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1207,15 +1189,15 @@ mas_branch_conquest_5 = {
 				}
 				value = 9
 			}
-		} 
+		}
 
 		effect = {
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige_or_monarch_power = { amount = 25 } 
 			add_country_modifier = {
-				name = mas_j_colonizing_fervor
+				name = "mas_j_colonizing_fervor"
 				duration = 3975
 			}
-		} 
+		}
 	}
 }
 mas_eco_1 = {
@@ -1225,15 +1207,148 @@ mas_eco_1 = {
 	has_country_shield = yes
 	potential = { tag = MAS } 
 
-	mas_j_cantonese_trade = {
-		icon = mission_trade_with_cathay
-		position = 11
-		required_missions = { mas_j_the_arteries_of_trade } 
+	mas_j_seize_noble_wealth = {
+		icon = balance_the_estates
+		position = 9
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 25
+				NOT = {
+					culture = filipino
+				}
+			}
+			OR = {
+				AND = {
+					crown_land_share = 40
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 65
+					}
+					NOT = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 65
+						}
+					}
+				}
+				AND = {
+					NOT = {
+						has_estate = estate_nobles
+					}
+					crown_land_share = 50
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = mas_j_seized_noble_wealth
+				duration = 5475
+			}
+		} 
+	}
+
+	mas_j_handling_the_estates = {
+		icon = mission_ahmadabad_paper
+		position = 10
+		required_missions = { mas_j_seize_noble_wealth } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 3
+			OR = {
+				AND = {
+					crown_land_share = 100
+					NOT = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 50
+						}
+					}
+					NOT = {
+						estate_influence = {
+							estate = estate_burghers
+							influence = 50
+						}
+					}
+					NOT = {
+						estate_influence = {
+							estate = estate_church
+							influence = 50
+						}
+					}
+				}
+				AND = {
+					estate_loyalty = {
+						estate = all
+						loyalty = 65
+					}
+					estate_influence = {
+						estate = all
+						influence = 60
+					}
+					if = {
+						limit = { has_estate = estate_nobles }
+						num_of_estate_privileges = {
+							estate = estate_nobles
+							value = 5
+						}
+					}
+					if = {
+						limit = { has_estate = estate_burghers }
+						num_of_estate_privileges = {
+							estate = estate_burghers
+							value = 5
+						}
+					}
+					if = {
+						limit = { has_estate = estate_church }
+						num_of_estate_privileges = {
+							estate = estate_church
+							value = 5
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						crown_land_share = 100
+						NOT = {
+							estate_influence = {
+								estate = estate_nobles
+								influence = 50
+							}
+						}
+						NOT = {
+							estate_influence = {
+								estate = estate_burghers
+								influence = 50
+							}
+						}
+						NOT = {
+							estate_influence = {
+								estate = estate_church
+								influence = 50
+							}
+						}
+					}
+				}
+				set_country_flag = mas_j_handling_the_estates_flag
+				# Add Government Reform for Contained Estates/Liberalized Reform
+			}
+			else = {
+				set_country_flag = mas_j_strengthening_the_estates_flag
+				# Add Government Reform for Strengthed Estates/Conservative/Noble Reform
+			}
+
+		} 
 	}
 }
 mas_eco_2 = {
@@ -1277,9 +1392,7 @@ mas_eco_3 = {
 		position = 9
 		provinces_to_highlight = {  } 
 
-		trigger = {
-			always = no
-		} 
+		trigger = { always = no } 
 
 		effect = {  } 
 	}
@@ -1288,6 +1401,20 @@ mas_eco_3 = {
 		icon = mission_early_game_buildings
 		position = 10
 		required_missions = { mas_j_new_economy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_canton_trade = {
+		icon = mission_to_the_south_china_sea
+		position = 11
+		required_missions = {
+			mas_j_the_arteries_of_trade
+			mas_j_development_1
+		}
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -1339,9 +1466,7 @@ mas_eco_5 = {
 		position = 9
 		provinces_to_highlight = {  } 
 
-		trigger = {
-			always = no
-		} 
+		trigger = { always = no } 
 
 		effect = {  } 
 	}

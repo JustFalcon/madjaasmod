@@ -54,3 +54,9 @@ mas_j_colonizing_fervor = {
 	global_colonial_growth = 25
 	colonist_placement_chance = 0.05
 }
+
+mas_j_seized_noble_wealth = {
+	build_cost = -0.15
+	build_time = -0.15
+	nobles_influence_modifier = -0.10
+}
