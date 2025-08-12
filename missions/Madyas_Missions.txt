@@ -1200,7 +1200,7 @@ mas_branch_conquest_5 = {
 		}
 	}
 }
-mas_eco_1 = {
+mas_estate_1 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -1209,15 +1209,13 @@ mas_eco_1 = {
 
 	mas_j_seize_noble_wealth = {
 		icon = balance_the_estates
-		position = 9
+		position = 8
 		provinces_to_highlight = {  } 
 
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
-				NOT = {
-					culture = filipino
-				}
+				NOT = { culture = filipino } 
 			}
 			OR = {
 				AND = {
@@ -1234,26 +1232,24 @@ mas_eco_1 = {
 					}
 				}
 				AND = {
-					NOT = {
-						has_estate = estate_nobles
-					}
+					NOT = { has_estate = estate_nobles } 
 					crown_land_share = 50
 				}
 			}
-		} 
+		}
 
 		effect = {
 			add_years_of_income = 2
 			add_country_modifier = {
-				name = mas_j_seized_noble_wealth
+				name = "mas_j_seized_noble_wealth"
 				duration = 5475
 			}
-		} 
+		}
 	}
 
 	mas_j_handling_the_estates = {
 		icon = mission_ahmadabad_paper
-		position = 10
+		position = 9
 		required_missions = { mas_j_seize_noble_wealth } 
 		provinces_to_highlight = {  } 
 
@@ -1291,21 +1287,21 @@ mas_eco_1 = {
 						influence = 60
 					}
 					if = {
-						limit = { has_estate = estate_nobles }
+						limit = { has_estate = estate_nobles } 
 						num_of_estate_privileges = {
 							estate = estate_nobles
 							value = 5
 						}
 					}
 					if = {
-						limit = { has_estate = estate_burghers }
+						limit = { has_estate = estate_burghers } 
 						num_of_estate_privileges = {
 							estate = estate_burghers
 							value = 5
 						}
 					}
 					if = {
-						limit = { has_estate = estate_church }
+						limit = { has_estate = estate_church } 
 						num_of_estate_privileges = {
 							estate = estate_church
 							value = 5
@@ -1313,7 +1309,7 @@ mas_eco_1 = {
 					}
 				}
 			}
-		} 
+		}
 
 		effect = {
 			if = {
@@ -1341,18 +1337,13 @@ mas_eco_1 = {
 					}
 				}
 				set_country_flag = mas_j_handling_the_estates_flag
-				# Add Government Reform for Contained Estates/Liberalized Reform
 			}
-			else = {
-				set_country_flag = mas_j_strengthening_the_estates_flag
-				# Add Government Reform for Strengthed Estates/Conservative/Noble Reform
-			}
-
-		} 
+			else = { set_country_flag = mas_j_strengthening_the_estates_flag } 
+		}
 	}
 }
-mas_eco_2 = {
-	slot = 2
+mas_eco_1 = {
+	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -1380,8 +1371,8 @@ mas_eco_2 = {
 		effect = {  } 
 	}
 }
-mas_eco_3 = {
-	slot = 3
+mas_eco_2 = {
+	slot = 2
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -1422,8 +1413,8 @@ mas_eco_3 = {
 		effect = {  } 
 	}
 }
-mas_eco_4 = {
-	slot = 4
+mas_eco_3 = {
+	slot = 3
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -1454,8 +1445,8 @@ mas_eco_4 = {
 		effect = {  } 
 	}
 }
-mas_eco_5 = {
-	slot = 5
+mas_eco_4 = {
+	slot = 4
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -1470,6 +1461,35 @@ mas_eco_5 = {
 
 		effect = {  } 
 	}
+
+	mas_j_expand_natural_resources = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 10
+		required_missions = { mas_j_goods_malaya } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mas_j_gold_of_butua = {
+		icon = mission_sw_torquoise_mining
+		position = 11
+		required_missions = { mas_j_expand_natural_resources } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mas_eco_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAS } 
 
 	mas_j_strengthen_gem_production = {
 		icon = mission_entrepot_of_india
