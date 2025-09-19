@@ -21,3 +21,31 @@ mas_code_of_kalantiaw_reform = {
 	}
 
 }
+
+mas_cultural_migration_reform = {
+	icon = "united_cantons_reform"
+	allow_normal_conversion = yes
+	potential = {
+		AND = {
+			OR = {
+				has_unlocked_government_reform = {
+					government_reform = mas_cultural_migration_reform
+				}
+				have_had_reform = mas_cultural_migration_reform
+			}
+			is_or_was_tag = { tag = MAS }
+		}
+	}
+	trigger = {
+		#mission_completed = mas_mission_cultural_migration
+		always = yes
+	}
+	modifiers = {
+		promote_culture_cost = 1
+		culture_conversion_time = -0.15
+		culture_conversion_cost = -0.15
+	}
+	government_abilities = {
+		mas_cultural_migration_mechanic
+	}
+}

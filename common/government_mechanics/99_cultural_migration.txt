@@ -1,0 +1,79 @@
+mas_cultural_migration_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 14
+	available = {
+		has_dlc = "Domination"
+	}
+	
+	interactions = {
+		inward_policy = {
+			icon = GFX_inward_focus_button
+			trigger = {
+			}
+			effect = {
+				hidden_effect = {
+					remove_country_modifier = mas_cultural_migration_inwards
+					remove_country_modifier = mas_cultural_migration_balanced
+					remove_country_modifier = mas_cultural_migration_outwards
+				}
+				add_country_modifier = {
+					name = mas_cultural_migration_inwards
+					duration = -1
+					desc = until_different_policy_tt
+				}
+			}
+			cooldown_years = 15
+			cooldown_token = cultural_migration_mechanic
+			cooldown_desc = MIGRATION_POLICY
+			ai_chance = {
+				factor = 10
+			}
+		}
+		outward_policy = {
+			icon = GFX_outward_focus_button
+			trigger = { 
+			}
+			effect = { 
+				hidden_effect = {
+					remove_country_modifier = mas_cultural_migration_inwards
+					remove_country_modifier = mas_cultural_migration_balanced
+					remove_country_modifier = mas_cultural_migration_outwards
+				}
+				add_country_modifier = {
+					name = mas_cultural_migration_balanced
+					duration = -1
+					desc = until_different_policy_tt
+				}
+			}
+			cooldown_years = 15
+			cooldown_token = cultural_migration_mechanic
+			cooldown_desc = MIGRATION_POLICY
+			ai_chance = {
+				factor = 10
+			}
+		}
+		balanced_policy = {
+			icon = GFX_expansion_focus_button
+			trigger = {
+			}
+			effect = { 
+				hidden_effect = {
+					remove_country_modifier = mas_cultural_migration_inwards
+					remove_country_modifier = mas_cultural_migration_balanced
+					remove_country_modifier = mas_cultural_migration_outwards
+				}
+				add_country_modifier = {
+					name = mas_cultural_migration_outwards
+					duration = -1
+					desc = until_different_policy_tt
+				}
+			}
+			cooldown_years = 15
+			cooldown_token = cultural_migration_mechanic
+			cooldown_desc = MIGRATION_POLICY
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}

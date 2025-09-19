@@ -60,3 +60,15 @@ mas_j_seized_noble_wealth = {
 	build_time = -0.15
 	nobles_influence_modifier = -0.10
 }
+
+mas_cultural_migration_inwards = {
+	development_cost_in_primary_culture = -0.05
+}
+
+mas_cultural_migration_outwards = {
+	merchants = 1
+}
+
+mas_cultural_migration_balanced = {
+	diplomats = 1
+}

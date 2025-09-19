@@ -874,6 +874,7 @@ republic = {
 				#1.36
 				superiority_of_the_state_reform
 				divided_aristocracy_reform
+				mas_cultural_migration_reform
 			}
 		}
 		economical_matters_republic = {
